@@ -2,29 +2,29 @@
 
 ## Overview
 
-The **Auto Email / Ticket Categorizer** is a lightweight Natural Language Processing (NLP) application that automatically classifies incoming support tickets into the appropriate department.
+The **Auto Email / Ticket Categorizer** is an AI-powered support ticket classification system that automatically categorizes incoming customer emails into the appropriate department.
 
-The project uses **TF-IDF Vectorization** and a **Machine Learning classifier (Naive Bayes)** to categorize tickets into:
+The application combines **Traditional Machine Learning** with a **Large Language Model (LLM)** to achieve accurate and reliable predictions.
 
-* Billing
-* Technical
-* HR
-* General
+* **Primary Model:** TF-IDF + Multinomial Naive Bayes
+* **Fallback Model:** NVIDIA NIM API using **Llama 3.3 70B Instruct**
 
-It also predicts a confidence score, assigns a priority level, and flags low-confidence tickets for manual review.
+If the Machine Learning model predicts with high confidence, the ticket is automatically categorized. If the confidence is low, the ticket is intelligently analyzed using an LLM to improve prediction accuracy.
 
 ---
 
 # Features
 
-* NLP-based support ticket classification
+* AI-powered support ticket classification
+* Hybrid ML + LLM architecture
 * TF-IDF text vectorization
-* Naive Bayes classifier
-* Automatic ticket routing
-* Confidence score
-* Human review threshold
-* Priority tagging (Urgent / Normal)
-* Interactive web interface using Flask
+* Multinomial Naive Bayes classifier
+* NVIDIA Llama 3.3 integration
+* Automatic confidence scoring
+* Human review detection
+* Priority prediction (Urgent / Normal)
+* Explanation (Reason) for every prediction
+* Modern Flask web interface
 * Clean and modular project structure
 
 ---
@@ -37,46 +37,51 @@ It also predicts a confidence score, assigns a priority level, and flags low-con
 * Pandas
 * NLTK
 * Joblib
+* OpenAI Python SDK (NVIDIA NIM compatible)
+* NVIDIA NIM API (Llama 3.3 70B Instruct)
+* HTML5
+* CSS3
 
 ---
 
 # Project Structure
 
-```
-Auto_Email_Categorizer/
+```text
+Auto-Email-Ticket-Categorizer/
 │
 ├── app.py
 ├── train.py
 ├── utils.py
 ├── requirements.txt
 ├── README.md
-│
-├── templates/
-│   └── index.html
-│
-├── static/
-│   └── style.css
+├── .env
 │
 ├── data/
 │   └── support_tickets.csv
 │
-└── models/
-    └── ticket_classifier.pkl
+├── models/
+│   └── ticket_classifier.pkl
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── style.css
 ```
 
 ---
 
 # Dataset
 
-This project uses a **self-created dummy dataset** consisting of support tickets.
+The project uses a self-created support ticket dataset containing multiple business scenarios.
 
-Dataset Fields:
+### Dataset Fields
 
 * Subject
 * Body
 * Category
 
-Categories:
+### Categories
 
 * Billing
 * Technical
@@ -85,17 +90,52 @@ Categories:
 
 ---
 
+# System Architecture
+
+```text
+                 Support Ticket
+                       │
+                       ▼
+           Text Cleaning & Preprocessing
+                       │
+                       ▼
+          TF-IDF + Naive Bayes Classifier
+                       │
+             Confidence Score Generated
+                       │
+         ┌─────────────┴─────────────┐
+         │                           │
+ Confidence ≥ 60%           Confidence < 60%
+         │                           │
+         ▼                           ▼
+ Machine Learning             NVIDIA Llama 3.3
+ Prediction                  (LLM Prediction)
+         │                           │
+         └─────────────┬─────────────┘
+                       ▼
+               Final Prediction
+```
+
+---
+
 # Workflow
 
-1. Load Dataset
-2. Combine Subject + Body
-3. Clean Text
-4. Remove Stopwords
-5. Convert text into TF-IDF vectors
-6. Train Naive Bayes classifier
-7. Evaluate model
-8. Save trained model
-9. Predict new tickets through the web application
+1. Load support ticket dataset
+2. Combine subject and body
+3. Clean and preprocess text
+4. Convert text into TF-IDF vectors
+5. Train Multinomial Naive Bayes classifier
+6. Save trained model
+7. Predict category using Machine Learning
+8. Calculate confidence score
+9. If confidence is below 60%, use NVIDIA Llama 3.3
+10. Display:
+
+* Category
+* Confidence
+* Priority
+* Prediction Reason
+* Prediction Source
 
 ---
 
@@ -117,32 +157,50 @@ The preprocessing pipeline includes:
 
 The project converts text into numerical vectors using **TF-IDF (Term Frequency–Inverse Document Frequency)**.
 
-Why TF-IDF?
+### Why TF-IDF?
 
-* Gives higher importance to meaningful words.
-* Reduces the impact of common words.
-* Produces sparse vectors suitable for text classification.
+* Gives higher importance to meaningful words
+* Reduces the influence of common words
+* Produces efficient sparse vectors
+* Works well for traditional NLP classifiers
 
 ---
 
 # Machine Learning Model
 
-Classifier Used:
+### Primary Model
 
 **Multinomial Naive Bayes**
 
-Reason:
+Advantages:
 
 * Fast training
+* Lightweight
 * Efficient prediction
 * Excellent baseline for text classification
-* Commonly used for spam filtering and email categorization
+
+---
+
+# LLM Integration
+
+When the Machine Learning model is uncertain, the application automatically calls **NVIDIA NIM API** using:
+
+**Meta Llama 3.3 70B Instruct**
+
+The LLM returns:
+
+* Category
+* Confidence
+* Priority
+* Explanation (Reason)
+
+This improves prediction quality for complex or ambiguous support tickets.
 
 ---
 
 # Evaluation Metrics
 
-The model is evaluated using:
+The Machine Learning model is evaluated using:
 
 * Accuracy
 * Precision
@@ -154,30 +212,35 @@ The model is evaluated using:
 
 # Human Review Logic
 
-If the prediction confidence is below **60%**, the ticket is routed to:
+If:
 
-**Needs Human Review**
+```text
+Confidence < 60%
+```
 
-instead of being automatically assigned.
+the application automatically switches to **NVIDIA Llama 3.3** for a more intelligent prediction.
+
+This hybrid strategy improves accuracy while keeping inference efficient.
 
 ---
 
 # Priority Detection
 
-Keyword-based rules assign ticket priority.
+Priority is determined using keyword-based rules.
 
-Urgent keywords include:
+### Urgent Keywords
 
 * urgent
 * critical
 * server down
 * failed
-* error
 * crash
 * cannot
+* error
+* outage
 * not working
 
-Priority Levels:
+### Priority Levels
 
 * Urgent
 * Normal
@@ -186,11 +249,15 @@ Priority Levels:
 
 # How to Run
 
-## 1. Clone the project
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Deepaananthan2004/Auto-Email-Ticket-Categorizer.git
+
+cd Auto-Email-Ticket-Categorizer
 ```
+
+---
 
 ## 2. Create Virtual Environment
 
@@ -204,25 +271,47 @@ Windows
 venv\Scripts\activate
 ```
 
-## 3. Install dependencies
+Linux / macOS
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+## 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 4. Train the model
+---
+
+## 4. Configure Environment Variables
+
+Create a `.env` file.
+
+```env
+NVIDIA_API_KEY=your_nvidia_api_key
+```
+
+---
+
+## 5. Train the Machine Learning Model
 
 ```bash
 python train.py
 ```
 
-This creates:
+This generates:
 
-```
+```text
 models/ticket_classifier.pkl
 ```
 
-## 5. Start the application
+---
+
+## 6. Run the Flask Application
 
 ```bash
 python app.py
@@ -230,45 +319,54 @@ python app.py
 
 Open your browser:
 
-```
+```text
 http://127.0.0.1:5000
 ```
 
 ---
 
-# Sample Prediction
+# Example Prediction
 
-**Input**
+### Input
 
+```text
+Hi,
+
+We have received your details.
+
+After deducting the applicable registration cancellation charges,
+a refund of Rs.2000 will be processed and credited within 2–5 working days.
 ```
-My payment was deducted twice from my account.
-```
 
-**Prediction**
+### Output
 
-```
+```text
 Category   : Billing
 
-Confidence : 96%
+Confidence : 98%
 
 Priority   : Normal
 
-Status     : Auto Assigned
+Status     : Predicted using NVIDIA Llama 3.3
+
+Reason     : The ticket discusses refund processing and cancellation charges.
 ```
 
 ---
 
 # Future Improvements
 
-* Use Logistic Regression or transformer-based models (e.g., DistilBERT)
-* Expand the dataset with more diverse real-world tickets
-* Add lemmatization and stemming
-* Deploy the application using Docker and cloud hosting
-* Integrate with enterprise helpdesk platforms
-* Add user authentication and ticket history
+* Replace Naive Bayes with Logistic Regression
+* Fine-tune a transformer model (BERT/DistilBERT)
+* Expand dataset with real-world enterprise tickets
+* Add OCR for email attachments
+* Integrate Retrieval-Augmented Generation (RAG)
+* Connect with Jira, ServiceNow, or Zendesk
+* Add authentication and ticket history
+* Deploy using Docker and cloud platforms
 
 ---
 
 # Conclusion
 
-This project demonstrates how Natural Language Processing and Machine Learning can automate support ticket routing. It showcases text preprocessing, feature extraction, model training, evaluation, and deployment through a simple web interface, providing a practical foundation for AI-powered helpdesk systems.
+This project demonstrates a practical hybrid AI workflow by combining a traditional NLP classifier with a Large Language Model. The Machine Learning model efficiently handles routine support tickets, while NVIDIA Llama 3.3 provides intelligent fallback predictions for low-confidence cases. The result is a scalable, explainable, and production-inspired ticket categorization system suitable for enterprise helpdesk automation and AI engineering portfolios.

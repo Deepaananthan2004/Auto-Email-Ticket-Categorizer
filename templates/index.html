@@ -31,24 +31,26 @@
                 <h1>Auto Email Ticket Categorizer</h1>
 
                 <p>
-                    AI-powered Support Ticket Classification
+                    AI-Powered Support Ticket Classification using Machine Learning + NVIDIA Llama 3.3
                 </p>
 
             </div>
 
             <form method="POST">
 
-                <label>
+                <label for="ticket">
+                    <i class="fa-solid fa-ticket"></i>
                     Support Ticket
                 </label>
 
                 <textarea
+                    id="ticket"
                     name="ticket"
                     placeholder="Example:
 My payment was deducted twice but my subscription is still inactive."
-                    required></textarea>
+                    required>{{ result.ticket if result else '' }}</textarea>
 
-                <button>
+                <button type="submit">
 
                     <i class="fa-solid fa-robot"></i>
 
@@ -74,7 +76,10 @@ My payment was deducted twice but my subscription is still inactive."
 
                     <div class="box">
 
-                        <span>Category</span>
+                        <span>
+                            <i class="fa-solid fa-layer-group"></i>
+                            Category
+                        </span>
 
                         <h3>{{ result.category }}</h3>
 
@@ -82,7 +87,10 @@ My payment was deducted twice but my subscription is still inactive."
 
                     <div class="box">
 
-                        <span>Confidence</span>
+                        <span>
+                            <i class="fa-solid fa-bullseye"></i>
+                            Confidence
+                        </span>
 
                         <h3>{{ result.confidence }}%</h3>
 
@@ -90,7 +98,10 @@ My payment was deducted twice but my subscription is still inactive."
 
                     <div class="box">
 
-                        <span>Priority</span>
+                        <span>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            Priority
+                        </span>
 
                         <h3>{{ result.priority }}</h3>
 
@@ -98,7 +109,10 @@ My payment was deducted twice but my subscription is still inactive."
 
                     <div class="box">
 
-                        <span>Status</span>
+                        <span>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Status
+                        </span>
 
                         <h3>{{ result.review }}</h3>
 
@@ -108,7 +122,21 @@ My payment was deducted twice but my subscription is still inactive."
 
                 <div class="ticket">
 
-                    <strong>Ticket</strong>
+                    <strong>
+                        <i class="fa-solid fa-lightbulb"></i>
+                        Reason
+                    </strong>
+
+                    <p>{{ result.reason }}</p>
+
+                </div>
+
+                <div class="ticket">
+
+                    <strong>
+                        <i class="fa-solid fa-envelope"></i>
+                        Original Support Ticket
+                    </strong>
 
                     <p>{{ result.ticket }}</p>
 
