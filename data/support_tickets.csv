@@ -1,0 +1,241 @@
+subject,body,category
+Training Request,Please share my salary slip.,HR
+Payment Confirmation,My debit card payment failed.,Billing
+Attendance Issue,Attendance is marked incorrectly.,HR
+VPN Issue,Laptop freezes while working.,Technical
+Contact Details,What are your office timings?,General
+Product Information,What are your office timings?,General
+Joining Date,Interested in training.,HR
+Medical Leave,I want to resign.,HR
+Pricing Question,Where is your headquarters located?,General
+Leave Request,Attendance is marked incorrectly.,HR
+API Error,Website shows 404 error.,Technical
+Product Information,I have a feature suggestion.,General
+Support Hours,When is support available?,General
+Pricing Question,Where is your headquarters located?,General
+Network Issue,The application crashes after login.,Technical
+Welcome,Tell me about your services.,General
+Application Crash,Network connection is unstable.,Technical
+Payment Failed,The discount coupon was not applied.,Billing
+Password Reset,System is not working.,Technical
+Information Request,Where can I find documentation?,General
+Authentication Error,Production server is down.,Technical
+Discount Missing,The discount coupon was not applied.,Billing
+Leave Request,Share employee benefits.,HR
+Printer Issue,Password reset link is invalid.,Technical
+Password Reset,Getting HTTP 500 error.,Technical
+Refund Request,Please verify my monthly bill.,Billing
+Payment Failed,Need payment receipt.,Billing
+Resignation,Can my joining date change?,HR
+Server Down,VPN disconnects frequently.,Technical
+Leave Request,Please share my salary slip.,HR
+Invoice Correction,Need payment receipt.,Billing
+Insurance Query,Please share my salary slip.,HR
+Authentication Error,Printer is not responding.,Technical
+Application Crash,VPN disconnects frequently.,Technical
+Medical Leave,Share employee benefits.,HR
+Upgrade Charge,I cannot access my billing history.,Billing
+Information Request,Explain your pricing plans.,General
+Meeting Request,Where can I find documentation?,General
+Printer Issue,Network connection is unstable.,Technical
+Working Hours,When is support available?,General
+Payment Failed,Need payment receipt.,Billing
+Feedback,Happy to join your platform.,General
+Discount Missing,I cannot access my billing history.,Billing
+Payment Confirmation,I need a refund for the cancelled plan.,Billing
+Insurance Query,I want to resign.,HR
+Salary Slip,Please share my salary slip.,HR
+Documentation,Need product brochure.,General
+Refund Delay,Please send my invoice.,Billing
+Office Address,Need product brochure.,General
+Network Issue,The application crashes after login.,Technical
+Website Error,Getting HTTP 500 error.,Technical
+Invoice Correction,My credit card was charged incorrectly.,Billing
+Attendance Issue,Need PF information.,HR
+Printer Issue,Password reset link is invalid.,Technical
+Information Request,Happy to join your platform.,General
+Leave Request,Need promotion policy details.,HR
+Leave Request,Attendance is marked incorrectly.,HR
+Installation Failed,Software installation failed.,Technical
+Email Login,Network connection is unstable.,Technical
+Installation Failed,Unable to login to my account.,Technical
+Support Hours,Where can I find documentation?,General
+Tax Issue,Payment gateway shows failed.,Billing
+Welcome,Requesting general information.,General
+Resignation,Need holiday calendar.,HR
+Invoice Missing,My debit card payment failed.,Billing
+Feedback,Tell me about your services.,General
+Application Crash,Laptop freezes while working.,Technical
+Wrong Charge,The GST amount is incorrect.,Billing
+Feature Suggestion,I have a feature suggestion.,General
+Product Information,When is support available?,General
+Salary Slip,Need insurance details.,HR
+Product Information,I have a feature suggestion.,General
+Joining Date,Attendance is marked incorrectly.,HR
+Pricing Question,I have a feature suggestion.,General
+Insurance Query,Requesting experience certificate.,HR
+Duplicate Payment,I cannot access my billing history.,Billing
+Cannot Login,Website shows 404 error.,Technical
+Documentation,Requesting general information.,General
+Installation Failed,Password reset link is invalid.,Technical
+Attendance Issue,Can my joining date change?,HR
+Discount Missing,I was billed after cancelling.,Billing
+Working Hours,What are your office timings?,General
+Salary Slip,I need leave approval.,HR
+Database Error,Unable to login to my account.,Technical
+Meeting Request,Where can I find documentation?,General
+Experience Letter,Attendance is marked incorrectly.,HR
+Invoice Correction,Need payment receipt.,Billing
+Medical Leave,Need PF information.,HR
+Payroll Question,Attendance is marked incorrectly.,HR
+Email Login,System is not working.,Technical
+Payment Declined,I need a refund for the cancelled plan.,Billing
+Software Bug,Laptop freezes while working.,Technical
+Documentation,Where can I find documentation?,General
+Working Hours,Need company information.,General
+Holiday List,Need my offer letter copy.,HR
+Business Inquiry,Happy to join your platform.,General
+Payroll Question,Share employee benefits.,HR
+Software Bug,Laptop freezes while working.,Technical
+Duplicate Payment,Need payment receipt.,Billing
+Office Location,How can I contact support?,General
+Office Address,Need company information.,General
+Upgrade Charge,My payment failed during checkout.,Billing
+Payroll Question,Requesting experience certificate.,HR
+Printer Issue,Software installation failed.,Technical
+Payment Declined,My credit card was charged incorrectly.,Billing
+Resignation,Need my offer letter copy.,HR
+Invoice Correction,Need payment receipt.,Billing
+Office Address,Where is your headquarters located?,General
+Insurance Query,Need PF information.,HR
+Medical Leave,Applying for medical leave.,HR
+Application Crash,Network connection is unstable.,Technical
+Laptop Problem,Production server is down.,Technical
+Training Request,Need holiday calendar.,HR
+Cannot Login,Laptop freezes while working.,Technical
+Database Error,Cannot connect to the database.,Technical
+Payment Confirmation,My payment failed during checkout.,Billing
+Offer Letter,Salary not credited.,HR
+Software Bug,Laptop freezes while working.,Technical
+Billing Error,I was charged twice for my subscription.,Billing
+PF Query,Need promotion policy details.,HR
+Payment Confirmation,I was billed after cancelling.,Billing
+Subscription Renewal,My payment failed during checkout.,Billing
+Offer Letter,Share employee benefits.,HR
+Refund Delay,My debit card payment failed.,Billing
+Network Issue,Production server is down.,Technical
+Wrong Charge,Please send my invoice.,Billing
+Welcome,When is support available?,General
+Subscription Renewal,Payment gateway shows failed.,Billing
+Resignation,Attendance is marked incorrectly.,HR
+Office Location,How can I contact support?,General
+Email Login,The application crashes after login.,Technical
+Upgrade Charge,Payment gateway shows failed.,Billing
+Wrong Charge,Please send my invoice.,Billing
+Salary Slip,Need PF information.,HR
+Salary Slip,Please share my salary slip.,HR
+Printer Issue,System is not working.,Technical
+Company Details,Looking for office address.,General
+Support Hours,What are your office timings?,General
+API Error,System is not working.,Technical
+Salary Slip,Need PF information.,HR
+Documentation,When is support available?,General
+Feature Suggestion,Can we schedule a meeting?,General
+Attendance Issue,Attendance is marked incorrectly.,HR
+Account Billing,The discount coupon was not applied.,Billing
+Authentication Error,VPN disconnects frequently.,Technical
+Billing Error,My credit card was charged incorrectly.,Billing
+Training Request,Please share my salary slip.,HR
+Software Bug,Cannot connect to the database.,Technical
+Meeting Request,"Excellent service, thank you.",General
+Authentication Error,System is not working.,Technical
+Employee Benefits,Share employee benefits.,HR
+Installation Failed,Production server is down.,Technical
+Support Hours,Looking for office address.,General
+Website Error,The application crashes after login.,Technical
+Feedback,What are your office timings?,General
+Password Reset,Unable to login to my account.,Technical
+Joining Date,Need my offer letter copy.,HR
+Software Bug,VPN disconnects frequently.,Technical
+Software Bug,VPN disconnects frequently.,Technical
+Wrong Charge,I need a refund for the cancelled plan.,Billing
+Refund Request,Payment gateway shows failed.,Billing
+VPN Issue,Email service is unavailable.,Technical
+Payment Confirmation,My debit card payment failed.,Billing
+Experience Letter,Applying for medical leave.,HR
+Promotion Query,Attendance is marked incorrectly.,HR
+Feedback,Need company information.,General
+Payment Failed,My payment failed during checkout.,Billing
+Feedback,Where is your headquarters located?,General
+Tax Issue,I need a refund for the cancelled plan.,Billing
+Payment Failed,Subscription renewed unexpectedly.,Billing
+Payment Declined,Please verify my monthly bill.,Billing
+Feature Suggestion,Explain your pricing plans.,General
+PF Query,Can my joining date change?,HR
+Laptop Problem,Website shows 404 error.,Technical
+Office Location,Looking for office address.,General
+Application Crash,Password reset link is invalid.,Technical
+Wrong Charge,Subscription renewed unexpectedly.,Billing
+Feature Suggestion,Can we schedule a meeting?,General
+Attendance Issue,Need holiday calendar.,HR
+Product Information,Tell me about your services.,General
+Website Error,The application crashes after login.,Technical
+Invoice Correction,My payment failed during checkout.,Billing
+Duplicate Payment,Please verify my monthly bill.,Billing
+Authentication Error,Password reset link is invalid.,Technical
+Email Login,Production server is down.,Technical
+Contact Details,"Excellent service, thank you.",General
+Invoice Missing,I need a refund for the cancelled plan.,Billing
+Wrong Charge,Need payment receipt.,Billing
+API Error,Email service is unavailable.,Technical
+PF Query,Need promotion policy details.,HR
+Company Details,Need company information.,General
+Feature Suggestion,Need product brochure.,General
+Promotion Query,I want to resign.,HR
+Insurance Query,Need holiday calendar.,HR
+Invoice Correction,I was billed after cancelling.,Billing
+Application Crash,Website shows 404 error.,Technical
+Welcome,Where is your headquarters located?,General
+Refund Request,Please verify my monthly bill.,Billing
+Leave Request,Interested in training.,HR
+Pricing Question,How can I contact support?,General
+Installation Failed,System is not working.,Technical
+Upgrade Charge,My payment failed during checkout.,Billing
+Office Address,What are your office timings?,General
+Welcome,Requesting general information.,General
+Payment Declined,Duplicate transaction detected.,Billing
+Subscription Renewal,Subscription renewed unexpectedly.,Billing
+Feedback,Need product brochure.,General
+Duplicate Payment,My credit card was charged incorrectly.,Billing
+Billing Error,My payment failed during checkout.,Billing
+Experience Letter,I want to resign.,HR
+Application Crash,Cannot connect to the database.,Technical
+Employee Benefits,Share employee benefits.,HR
+Pricing Question,What are your office timings?,General
+Training Request,Applying for medical leave.,HR
+Subscription Renewal,I need a refund for the cancelled plan.,Billing
+Promotion Query,Requesting experience certificate.,HR
+Employee Benefits,Requesting experience certificate.,HR
+Product Information,Tell me about your services.,General
+Joining Date,Attendance is marked incorrectly.,HR
+Authentication Error,Network connection is unstable.,Technical
+Feedback,Need product brochure.,General
+Attendance Issue,Applying for medical leave.,HR
+Pricing Question,Happy to join your platform.,General
+Installation Failed,Cannot connect to the database.,Technical
+Payment Failed,I was billed after cancelling.,Billing
+Network Issue,Unable to login to my account.,Technical
+Software Bug,Email service is unavailable.,Technical
+Laptop Problem,Laptop freezes while working.,Technical
+Product Information,Need company information.,General
+Tax Issue,My credit card was charged incorrectly.,Billing
+Support Hours,Where is your headquarters located?,General
+Printer Issue,Unable to login to my account.,Technical
+Billing Error,My payment failed during checkout.,Billing
+VPN Issue,Production server is down.,Technical
+Holiday List,Can my joining date change?,HR
+Invoice Correction,Please send my invoice.,Billing
+Joining Date,Need holiday calendar.,HR
+Refund Delay,Duplicate transaction detected.,Billing
+Refund Request,My payment failed during checkout.,Billing
+Resignation,Please share my salary slip.,HR
