@@ -107,7 +107,7 @@ def home():
                 "confidence": round(confidence * 100, 2),
                 "priority": priority,
                 "review": "Predicted using ML Model",
-                "reason": "High confidence prediction from TF-IDF + Naive Bayes."
+                "reason": "High confidence prediction from TF-IDF + Logistic Regression model."
             }
 
     return render_template("index.html", result=result)
@@ -115,3 +115,5 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+#build failed for Auto-Email-Ticket-Categorizer.

@@ -1,0 +1,4 @@
+Accuracy : 100.00%
+Cross Validation Accuracy : 100.00%
+Training Samples : 967
+Testing Samples : 242
